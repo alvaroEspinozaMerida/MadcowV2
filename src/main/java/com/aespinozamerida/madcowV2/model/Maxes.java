@@ -10,7 +10,18 @@ public class Maxes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    /*
+    * The @ManyToOne and @JoinColumn annotations in Spring
+    *  are part of the Java Persistence API (JPA)
+    * and are used to define a many-to-one relationship
+    *  between two entities. The @ManyToOne annotation
+    * is used to specify the relationship between the target
+    *  entity (the "many" side) and the source entity (the "one" side),
+    *  and the @JoinColumn annotation is used to specify the name of
+    *  the column in the target entity's table that will store the foreign
+    * key to the source entity's table.
+    *
+    * */
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

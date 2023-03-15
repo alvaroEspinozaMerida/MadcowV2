@@ -29,6 +29,14 @@ public class Workout {
 
     private Day day;
 
+    //The @JsonManagedReference annotation is used by the Jackson
+    // library to control the serialization of the relationship.
+    // This annotation is placed on the field in the source entity
+    // that represents the relationship and is used to indicate
+    // that the target entities should be serialized and included
+    // in the JSON representation of the source entity.
+    //
+    //Here is an example of how you might use the @OneToMany and @JsonManagedReference annotations in a Spring application:
     @OneToMany(mappedBy = "workout", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Exercise> exercise1 = new ArrayList<>();
